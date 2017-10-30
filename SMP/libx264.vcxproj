@@ -173,7 +173,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <IntDir>$(SolutionDir)obj\$(Configuration)\$(Platform)\$(ProjectName)\</IntDir>
     <TargetName>libx264d</TargetName>
-    <OutDir>$(ProjectDir)..\..\..\msvc\</OutDir>
+    <OutDir>$(ProjectDir)\bin</OutDir>
     <CustomBuildAfterTargets>Clean</CustomBuildAfterTargets>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugDLL|Win32'">
@@ -303,7 +303,7 @@ del /f /q $(OutDir)\licenses\x264.txt
       <C99Support>true</C99Support>
       <WarningLevel>Level3</WarningLevel>
       <DisableSpecificWarnings>4996;4244;4267;4003;4018;4305;%(DisableSpecificWarnings)</DisableSpecificWarnings>
-      <ProgramDataBaseFileName>$(OutDir)\lib\x64\$(TargetName).pdb</ProgramDataBaseFileName>
+      <ProgramDataBaseFileName>$(OutDir)$(TargetName).pdb</ProgramDataBaseFileName>
       <BasicRuntimeChecks>StackFrameRuntimeCheck</BasicRuntimeChecks>
       <MinimalRebuild>false</MinimalRebuild>
     </ClCompile>
@@ -311,7 +311,7 @@ del /f /q $(OutDir)\licenses\x264.txt
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
     <Lib>
-      <OutputFile>$(OutDir)\lib\x64\$(TargetName)$(TargetExt)</OutputFile>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
       <TargetMachine>MachineX64</TargetMachine>
       <SubSystem>Windows</SubSystem>
     </Lib>
